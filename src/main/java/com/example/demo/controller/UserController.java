@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/user/all_search", method = RequestMethod.POST)
-    public String searchAll(@ModelAttribute Model model) {
+    public String searchAll(Model model) {
         List<User> users = userService.searchAll();
         model.addAttribute("usersinfo", users);
         return "user/search";
