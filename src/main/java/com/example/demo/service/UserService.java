@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import com.example.demo.dto.UserSearchRequest;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserMapper;
+
+import java.util.List;
+
 /**
  * ユーザー情報 Service
  */
@@ -23,4 +26,5 @@ public class UserService {
     public User search(UserSearchRequest userSearchRequest) {
         return userMapper.search(userSearchRequest);
     }
+    public List<User> searchAll(){return userMapper.searchAll();}
 }
